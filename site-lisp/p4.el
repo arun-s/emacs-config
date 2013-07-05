@@ -649,17 +649,18 @@ the P4 depot or in the current client view.."
 	   (easy-menu-add (p4-mode-menu "P4"))))
     t)
 
-  (defun p4-help-text (cmd text)
-    (if cmd
-	(let ((buf (generate-new-buffer p4-output-buffer-name))
-	      (help-text ""))
-	  (if (= (p4-exec-p4 buf (list "help" cmd) t) 0)
-	      (setq help-text (save-excursion
-				(set-buffer buf)
-				(buffer-string))))
-	  (kill-buffer buf)
-	  (concat text help-text))
-      text))
+  (defun p4-help-text (cmd text) text)
+;; aruns - disabling help
+;;    (if cmd
+;;	(let ((buf (generate-new-buffer p4-output-buffer-name))
+;;	      (help-text ""))
+;;	  (if (= (p4-exec-p4 buf (list "help" cmd) t) 0)
+;;	      (setq help-text (save-excursion
+;;				(set-buffer buf)
+;;				(buffer-string))))
+;;	  (kill-buffer buf)
+;;	  (concat text help-text))
+;;     text))
 
   ;; To set the path to the p4 executable
   (defun p4-set-p4-executable (p4-exe-name)
