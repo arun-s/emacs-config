@@ -58,3 +58,5 @@
           (pop-up-windows t))
       (set-window-buffer target-window buf)
       target-window))
+
+(provide 'defun)

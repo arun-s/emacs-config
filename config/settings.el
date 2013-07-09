@@ -59,3 +59,6 @@
 ;;(add-hook 'write-file-hooks 'delete-trailing-whitespace)
 
 (put 'upcase-region 'disabled nil)
+
+
+(provide 'settings)

@@ -42,3 +42,5 @@
 (define-key ctl-x-map "C" 'see-you-again)
 (win:load-window 1)
 
+
+(provide 'display)

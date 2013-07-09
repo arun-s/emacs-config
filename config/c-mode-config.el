@@ -29,3 +29,4 @@
 	     )
 	  )
 
+(provide 'c-mode-config)
