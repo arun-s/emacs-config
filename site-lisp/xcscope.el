@@ -556,7 +556,7 @@ It is designed to answer questions like:
   :group 'tools)
 
 
-(defcustom cscope-do-not-update-database nil
+(defcustom cscope-do-not-update-database t
   "*If non-nil, never check and/or update the cscope database when searching.
 Beware of setting this to non-nil, as this will disable automatic database
 creation, updating, and maintenance."
