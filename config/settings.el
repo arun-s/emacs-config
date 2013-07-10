@@ -63,5 +63,9 @@
 
 (put 'upcase-region 'disabled nil)
 
+(setq frame-title-format
+          '(buffer-file-name
+            "%f"
+            (dired-directory dired-directory "%b")))
 
 (provide 'settings)

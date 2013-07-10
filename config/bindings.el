@@ -22,7 +22,6 @@
 (global-set-key [f1]          'move-2-windows)
 (global-set-key [f4]          'speedbar)
 (global-set-key [f9]          '(win:set-wc 1))
-(global-set-key "\C-xp"        (concat "arun" "sivakumaran"))
 
 (global-set-key "\C-xg" 'goto-line)
 
