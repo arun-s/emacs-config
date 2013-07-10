@@ -14,19 +14,22 @@
 
 (setq blink-cursor-mode nil)
 (setq column-number-mode t)
-(setq major-mode (quote text-mode) t)
+(setq major-mode (quote c-mode))
 (setq global-font-lock-mode t)
 (setq kill-whole-line t)
-(setq menu-bar-mode nil)
 (setq next-line-add-newlines nil)
 (setq nxml-child-indent 2)
 (setq query-replace-highlight t)
-(setq scroll-bar-mode nil)
 (setq scroll-conservatively 5)
 (setq scroll-step 1)
 (setq search-highlight t)
-(setq tool-bar-mode nil)
 (setq transient-mark-mode t)
+
+;; Minimalistic appearance, turn off menu, tool and scroll bars
+(menu-bar-mode nil)
+(tool-bar-mode nil)
+(scroll-bar-mode nil)
+
 
 ;; Use "y or n" answers instead of full words "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)

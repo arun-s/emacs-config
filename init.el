@@ -45,24 +45,57 @@
 ;; ================
 ;; Load Paths
 ;; ================
-(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/yasnippet"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/config"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-list"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/themes"))
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d/yasnippet"))
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d/config"))
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-list"))
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d/themes"))
+(setq load-path (cons "~/.emacs.d/"          load-path))
+(setq load-path (cons "~/.emacs.d/site-lisp/" load-path))
+(setq load-path (cons "~/.emacs.d/config/" load-path))
+(setq load-path (cons "~/.emacs.d/themes/" load-path))
+(setq load-path (cons "~/.emacs.d/yasnippet/" load-path))
+
+(setq major-mode (quote text-mode))
 
 ;; ===============
 ;; Loading modules
 ;; ===============
 (load-library "p4")
-(require `xcscope)
+(require 'xcscope)
 (require 'font-lock)
-(require 'highlight-symbol)
+;(require 'highlight-symbol)
+
 
 ;; Support for python-mode
 ; Add Python directory to exec path
-(add-to-list 'exec-path "c:/Python27(32-bit)/")
-(autoload 'python-mode "~/.emacs.d/site-lisp/python-mode.el" "Python Mode." t)
-(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+;(add-to-list 'exec-path "c:/Python27(32-bit)/")
+;(autoload 'python-mode "~/.emacs.d/site-lisp/python-mode.el" "Python Mode." t)
+;(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+;(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
+
+;; ===============================================
+;; Key bindings
+;; ===============================================
+(require 'bindings)
+
+;; ===============================================
+;; C mode specific settings
+;; ===============================================
+;(require 'c-mode-config)
+
+;; ===============================================
+;; Definitions of custom functions
+;; ===============================================
+(require 'defun)
+
+;; ===============================================
+;; Color themes, font settings etc.
+;; ===============================================
+(require 'display)
+
+;; ===============================================
+;; Various settings and preferences
+;; ===============================================
+(require 'settings)

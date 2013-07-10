@@ -10,31 +10,31 @@
 
 
 ;; global key bindings
-  (global-set-key [C-delete]    'kill-word)
-  (global-set-key [C-backspace] 'backward-kill-word)
-  (global-set-key [home]        'beginning-of-line)
-  (global-set-key [end]         'end-of-line)
-  (global-set-key [C-home]      'beginning-of-buffer)
-  (global-set-key [C-end]       'end-of-buffer)
+(global-set-key [C-delete]    'kill-word)
+(global-set-key [C-backspace] 'backward-kill-word)
+(global-set-key [home]        'beginning-of-line)
+(global-set-key [end]         'end-of-line)
+(global-set-key [C-home]      'beginning-of-buffer)
+(global-set-key [C-end]       'end-of-buffer)
 ;;  (global-set-key [f2]          'save-current-buffer)
 ;;  (global-set-key [f4]          'insert-date)
-  (global-set-key [f2]          'other-window)
-  (global-set-key [f1]          'move-2-windows)
-  (global-set-key [f4]          'speedbar)
-  (global-set-key [f9]          '(win:set-wc 1))
-  (global-set-key "\C-xp"        (concat "arun" "sivakumaran"))
+(global-set-key [f2]          'other-window)
+(global-set-key [f1]          'move-2-windows)
+(global-set-key [f4]          'speedbar)
+(global-set-key [f9]          '(win:set-wc 1))
+(global-set-key "\C-xp"        (concat "arun" "sivakumaran"))
 
-  (global-set-key "\C-xg" 'goto-line)
+(global-set-key "\C-xg" 'goto-line)
 
-  ;;;highlight key bindings
-  ;;;; toggle visibility
-  (global-set-key (kbd "<f6>")      'highlight-changes-visible-mode) ;; changes
+;;;highlight key bindings
+;;;; toggle visibility
+(global-set-key (kbd "<f6>")      'highlight-changes-visible-mode) ;; changes
   ;;;; remove the change-highlight in region
-  (global-set-key (kbd "S-<f6>")    'highlight-changes-remove-highlight)
-  ;;;; alt-pgup/pgdown jump to the previous/next change
-  ;;;; if you're not already using it for something else...
-  (global-set-key (kbd "<M-prior>") 'highlight-changes-previous-change)
-  (global-set-key (kbd "<M-next>")  'highlight-changes-next-change)
+(global-set-key (kbd "S-<f6>")    'highlight-changes-remove-highlight)
+;;;; alt-pgup/pgdown jump to the previous/next change
+;;;; if you're not already using it for something else...
+(global-set-key (kbd "<M-prior>") 'highlight-changes-previous-change)
+(global-set-key (kbd "<M-next>")  'highlight-changes-next-change)
 
 
 ;;cscope bindings
