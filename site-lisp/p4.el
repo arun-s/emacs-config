@@ -177,7 +177,7 @@ This provides for a much faster `p4-find-file-hook'."
   :type 'boolean
   :group 'p4)
 
-(defcustom p4-verbose t
+(defcustom p4-verbose nil
   "When set, p4 will pop up the output buffer with the result of the
 command."
   :type 'boolean

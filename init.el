@@ -64,16 +64,21 @@
 (load-library "p4")
 (require 'xcscope)
 (require 'font-lock)
-;(require 'highlight-symbol)
+(require 'highlight-symbol)
 
 
 ;; Support for python-mode
 ; Add Python directory to exec path
-;(add-to-list 'exec-path "c:/Python27(32-bit)/")
-;(autoload 'python-mode "~/.emacs.d/site-lisp/python-mode.el" "Python Mode." t)
-;(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
-;(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+(add-to-list 'exec-path "c:/Python27(32-bit)/")
+(autoload 'python-mode "~/.emacs.d/site-lisp/python-mode.el" "Python Mode." t)
+(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
+
+;; ===============================================
+;; Definitions of custom functions
+;; ===============================================
+(require 'defun)
 
 ;; ===============================================
 ;; Key bindings
@@ -83,12 +88,7 @@
 ;; ===============================================
 ;; C mode specific settings
 ;; ===============================================
-;(require 'c-mode-config)
-
-;; ===============================================
-;; Definitions of custom functions
-;; ===============================================
-(require 'defun)
+(require 'c-mode-config)
 
 ;; ===============================================
 ;; Color themes, font settings etc.

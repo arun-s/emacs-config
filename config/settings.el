@@ -57,6 +57,8 @@
 
 (add-to-list 'special-display-buffer-names '("*Completions*" display-special-buffer))
 (add-to-list 'special-display-buffer-names '("*cscope*" display-special-buffer))
+(add-to-list 'special-display-buffer-names '("*Help*" display-special-buffer))
+(add-to-list 'special-display-buffer-names '("*P4 Output*" display-special-buffer))
 
 ;;(add-hook 'window-setup-hook 'w32-maximize-frame t)
 ;;(add-hook 'write-file-hooks 'delete-trailing-whitespace)
