@@ -65,6 +65,7 @@
 (require 'xcscope)
 (require 'font-lock)
 (require 'highlight-symbol)
+(require 'doxymacs)
 
 
 ;; Support for python-mode

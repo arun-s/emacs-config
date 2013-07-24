@@ -29,4 +29,7 @@
 	     )
 	  )
 
+
+(add-hook 'c-mode-common-hook 'doxymacs-mode)
+
 (provide 'c-mode-config)
