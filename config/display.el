@@ -12,12 +12,13 @@
 ;; Font Setting
 ;; ============
 
-(set-face-font 'default "-*-Inconsolata-normal-r-*-*-15-*-*-*-c-*-iso8859-1")
+;(set-face-font 'default "-apple-Inconsolata-light-r-normal-*-17-*-*-*-m-*-iso10646-1")
+(set-face-font 'default "-outline-Inconsolata-normal-r-normal-normal-15-97-96-96-c-*-iso8859-1")
 ;;(set-default-font "-*-'Trebuchet MS'-normal-r-*-*-12-*-*-*-c-*-*-ansi-")
 ;;(set-default-font "-*-arial-normal-r-*-*-11-*-*-*-c-*-*-ansi-")
 ;;(set-default-font "-misc-fixed-medium-r-normal-*-*-85-*-*-c-*-koi8-r")
 ;;(set-face-font 'default "-*-terminus-*-r-*-*-14-*-*-*-*-*-iso8859-*")
-;(set-face-font 'default "-*-Consolas-*-r-*-*-15-*-*-*-*-*-iso8859-*")
+;(set-face-font 'default "-*-Consolas-normal-r-*-*-14-*-*-*-*-*-iso8859-*")
 ;(set-face-font 'default "-*-Trebuchet MS-normal-r-normal-normal-16-*-*-*-m-0-iso10646-1")
 ;;(set-face-font 'default "-raster-Fixedsys-normal-r-normal-normal-12-90-96-96-c-*-*-*")
 ;;(set-face-font 'default "-*-terminus-medium-r-*-*-*-120-75-75-*-*-iso8859-15 ¡V")

@@ -9,8 +9,9 @@
 ;; -------------------------------------------------------------------------
 
 ;;Use only spaces for TABs
-(setq-default indent-tabs-mode nil);
-(setq-default tab-width 4);
+(setq indent-tabs-mode nil)
+(setq tab-width 4)
+(setq tab-stop-list (number-sequence 4 200 4)) 
 
 (setq blink-cursor-mode nil)
 (setq column-number-mode t)
@@ -69,5 +70,10 @@
           '(buffer-file-name
             "%f"
             (dired-directory dired-directory "%b")))
+
+
+;; Associating file extensions with major mode
+(add-to-list 'auto-mode-alist '("\\.mak\\'" . makefile-mode))
+(add-to-list 'auto-mode-alist '("\\.mk\\'" . makefile-mode))
 
 (provide 'settings)

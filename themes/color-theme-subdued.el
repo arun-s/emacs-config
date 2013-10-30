@@ -53,5 +53,6 @@ Based on the Tango color palette."
      (info-xref ((t (:foreground "#729fcf")))) ; light sky blue
      (info-xref-visited ((t (:foreground "#ad7fa8")))) ; light plum
 
-     
-     )))
+)))
+
+(provide 'color-theme-subdued)

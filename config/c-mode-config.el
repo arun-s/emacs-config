@@ -14,21 +14,21 @@
 
 
 ;;BSD style emacs
-(setq c-default-style "bsd");
+;(setq c-default-style "linux");
 
 ;; cscope stuff
 (setq cscope-do-not-update-database t)
 
 (add-hook 'c-mode-common-hook
           '(lambda ()
-             (turn-on-auto-fill)
-             (setq fill x-column 80)
-             (setq comment-column 60)
-             (c-set-style "linux")
-             (c-basic-offset 4)
-	     )
-	  )
-
+             (c-set-offset 'substatement-open 0)
+	     (setq fill-column 80)
+	     (setq comment-column 50)
+             (setq c-basic-offset 4)
+	     (setq tab-width 4)
+	     (setq indent-tabs-mode nil)
+	     (setq tab-stop-list (number-sequence 4 200 4)))
+)
 
 (add-hook 'c-mode-common-hook 'doxymacs-mode)
 
