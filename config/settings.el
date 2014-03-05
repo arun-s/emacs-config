@@ -9,16 +9,16 @@
 ;; -------------------------------------------------------------------------
 
 ;;Use only spaces for TABs
-(setq indent-tabs-mode nil)
+(setq indent-tabs-mode -1)
 (setq tab-width 4)
 (setq tab-stop-list (number-sequence 4 200 4)) 
 
-(setq blink-cursor-mode nil)
+(setq blink-cursor-mode -1)
 (setq column-number-mode t)
 (setq major-mode (quote c-mode))
 (setq global-font-lock-mode t)
 (setq kill-whole-line t)
-(setq next-line-add-newlines nil)
+(setq next-line-add-newlines -1)
 (setq nxml-child-indent 2)
 (setq query-replace-highlight t)
 (setq scroll-conservatively 5)
@@ -27,9 +27,9 @@
 (setq transient-mark-mode t)
 
 ;; Minimalistic appearance, turn off menu, tool and scroll bars
-(menu-bar-mode nil)
-(tool-bar-mode nil)
-(scroll-bar-mode nil)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 
 ;; Use "y or n" answers instead of full words "yes or no"
@@ -51,10 +51,10 @@
 ;; Stop Emacs from splitting "frames", encourage it to pop up new
 ; frames for new content.
 ; see: http://www.gnu.org/software/emacs/elisp/html_node/Choosing-Window.html
-(setq pop-up-frames nil)
+(setq pop-up-frames -1)
 (setq special-display-popup-frame t)
-(setq split-window-preferred-function nil) ;discourage horizontal splits
-(setq pop-up-windows nil)
+(setq split-window-preferred-function -1) ;discourage horizontal splits
+(setq pop-up-windows -1)
 
 (add-to-list 'special-display-buffer-names '("*Completions*" display-special-buffer))
 (add-to-list 'special-display-buffer-names '("*cscope*" display-special-buffer))
@@ -64,7 +64,7 @@
 ;;(add-hook 'window-setup-hook 'w32-maximize-frame t)
 ;;(add-hook 'write-file-hooks 'delete-trailing-whitespace)
 
-(put 'upcase-region 'disabled nil)
+(put 'upcase-region 'disabled -1)
 
 (setq frame-title-format
           '(buffer-file-name

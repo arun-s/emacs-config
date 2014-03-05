@@ -29,7 +29,7 @@
 ;; ==============
 
 (global-highlight-changes-mode t)
-(setq highlight-changes-visibility-initial-state nil); initially hide
+(setq highlight-changes-visibility-initial-state -1); initially hide
 (hide-ifdef-mode t)
 
 (require 'color-theme)
