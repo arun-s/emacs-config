@@ -28,7 +28,7 @@
 ;; Highlight Mode
 ;; ==============
 
-(global-highlight-changes-mode t)
+(global-highlight-changes-mode -1)
 (setq highlight-changes-visibility-initial-state -1); initially hide
 (hide-ifdef-mode t)
 
