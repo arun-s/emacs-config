@@ -75,6 +75,10 @@
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
+;;support for rust major mode
+(autoload 'rust-mode "rust-mode" -1 t)
+(add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
+
 
 ;; ===============================================
 ;; Definitions of custom functions
