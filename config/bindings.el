@@ -19,7 +19,7 @@
 ;;  (global-set-key [f2]          'save-current-buffer)
 ;;  (global-set-key [f4]          'insert-date)
 (global-set-key [f2]          'other-window)
-(global-set-key [f1]          'move-2-windows)
+(global-set-key [f1]          'move-prev-window)
 (global-set-key [f4]          'speedbar)
 (global-set-key [f9]          '(win:set-wc 1))
 

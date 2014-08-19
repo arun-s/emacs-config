@@ -59,4 +59,9 @@
       (set-window-buffer target-window buf)
       target-window))
 
+(defun move-prev-window ()
+  "Move one window counterclockwise - assumes there are 3 windows"
+  (interactive)
+  (other-window -1))
+
 (provide 'defun)
