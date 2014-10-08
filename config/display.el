@@ -32,11 +32,13 @@
 (setq highlight-changes-visibility-initial-state -1); initially hide
 (hide-ifdef-mode t)
 
-(require 'color-theme)
-(color-theme-initialize)
+;(require 'color-theme)
+;(color-theme-initialize)
 
-(require 'sublime-text-2)
-(sublime-text-2)
+;(require 'sublime-text-2)
+;(sublime-text-2)
+(add-to-list 'custom-theme-load-path (format "%s/%s" custom-theme-directory "themes"))
+(load-theme 'base16-tomorrow t)
 
 ;(require 'windows)
 ;(win:startup-with-window)
