@@ -73,10 +73,11 @@
 (add-to-list 'exec-path "c:/Python27(32-bit)/")
 (autoload 'python-mode "~/.emacs.d/site-lisp/python-mode.el" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+(add-to-list 'auto-mode-alist '("wscript$" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;;support for rust major mode
-(autoload 'rust-mode "rust-mode" -1 t)
+(autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
 
 
@@ -110,7 +111,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("f41fd682a3cd1e16796068a2ca96e82cfd274e58b978156da0acce4d56f2b0d5" default))))
+ '(custom-safe-themes (quote ("f41fd682a3cd1e16796068a2ca96e82cfd274e58b978156da0acce4d56f2b0d5" default)))
+ '(inhibit-startup-screen t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
