@@ -16,8 +16,6 @@
 (global-set-key [end]         'end-of-line)
 (global-set-key [C-home]      'beginning-of-buffer)
 (global-set-key [C-end]       'end-of-buffer)
-;;  (global-set-key [f2]          'save-current-buffer)
-;;  (global-set-key [f4]          'insert-date)
 (global-set-key [f2]          'other-window)
 (global-set-key [f1]          'move-prev-window)
 (global-set-key [f4]          'speedbar)
@@ -25,7 +23,7 @@
 
 (global-set-key "\C-xg" 'goto-line)
 
-;;;highlight key bindings
+;;; highlight key bindings
 ;;;; toggle visibility
 (global-set-key (kbd "<f6>")      'highlight-changes-visible-mode) ;; changes
   ;;;; remove the change-highlight in region
@@ -36,18 +34,27 @@
 (global-set-key (kbd "<M-next>")  'highlight-changes-next-change)
 
 
-;;cscope bindings
-(global-set-key "\C-cs" 'cscope-find-this-symbol)
-(global-set-key "\C-cp" 'cscope-prev-symbol)
-(global-set-key "\C-cn" 'cscope-next-symbol)
-(global-set-key "\C-cu" 'cscope-pop-mark)
-(global-set-key "\C-cO" 'move-2-windows)
-(global-set-key "\C-cg" 'cscope-find-egrep-pattern)
+;; cscope bindings
+(global-set-key "\C-c s" 'cscope-find-this-symbol)
+(global-set-key "\C-c p" 'cscope-prev-symbol)
+(global-set-key "\C-c n" 'cscope-next-symbol)
+(global-set-key "\C-c u" 'cscope-pop-mark)
+(global-set-key "\C-c O" 'move-2-windows)
+(global-set-key "\C-c g" 'cscope-find-egrep-pattern)
 
-;;highlight symbol bindings
+;; highlight symbol bindings
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
 (global-set-key [f3] 'highlight-symbol-next)
 (global-set-key [(shift f3)] 'highlight-symbol-prev)
 (global-set-key [(meta f3)] 'highlight-symbol-remove-all)
+
+;; elpy bindings
+;;; fixing a key binding bug in elpy
+(define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
+;;; fixing a key binding bug in iedit
+(define-key global-map (kbd "C-c o") 'iedit-mode)
+
+;; magit bindings
+(define-key global-map (kbd "C-c m") 'magit-status)
 
 (provide 'bindings)

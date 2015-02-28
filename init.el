@@ -41,22 +41,40 @@
 ;; -------------------------------------------------------------------------
 
 
-
 ;; ================
 ;; Load Paths
 ;; ================
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/yasnippet"))
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/config"))
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-list"))
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/themes"))
 (setq load-path (cons "~/.emacs.d/"          load-path))
 (setq load-path (cons "~/.emacs.d/site-lisp/" load-path))
 (setq load-path (cons "~/.emacs.d/config/" load-path))
 (setq load-path (cons "~/.emacs.d/themes/" load-path))
-(setq load-path (cons "~/.emacs.d/yasnippet/" load-path))
 
-(setq major-mode (quote text-mode))
+;; ================
+;; Package related
+;; ================
+;;; start package.el with emacs
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/"))
+;;; initialize package
+(package-initialize)
+
+;(require 'prelude-packages)
+
+;;; start auto-complete with emacs
+(require 'auto-complete)
+;;; do default config for auto-complete
+(require 'auto-complete-config)
+(ac-config-default)
+
+;;; start yasnippet with emacs
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;;; enable elpy
+(elpy-enable)
 
 ;; ===============
 ;; Loading modules
@@ -80,6 +98,7 @@
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
 
+(setq major-mode (quote text-mode))
 
 ;; ===============================================
 ;; Definitions of custom functions
@@ -96,7 +115,6 @@
 ;; ===============================================
 (require 'display)
 
-(scroll-bar-mode)
 ;; ===============================================
 ;; C mode specific settings
 ;; ===============================================
@@ -119,3 +137,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+

@@ -33,7 +33,7 @@
 
 
 ;; Use "y or n" answers instead of full words "yes or no"
-(fset 'yes-or-no-p 'y-or-n-p)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; colomn limit to be 80
 (setq-default fill-column 80)
@@ -52,17 +52,13 @@
 ; frames for new content.
 ; see: http://www.gnu.org/software/emacs/elisp/html_node/Choosing-Window.html
 (setq pop-up-frames nil)
-(setq special-display-popup-frame t)
-(setq split-window-preferred-function -1) ;discourage horizontal splits
-(setq pop-up-windows -1)
+(setq special-display-popup-frame nil)
+(setq split-window-preferred-function nil) ;discourage horizontal splits
+(setq pop-up-windows nil)
 
-(add-to-list 'special-display-buffer-names '("*Completions*" display-special-buffer))
-(add-to-list 'special-display-buffer-names '("*cscope*" display-special-buffer))
-(add-to-list 'special-display-buffer-names '("*Help*" display-special-buffer))
-(add-to-list 'special-display-buffer-names '("*P4 Output*" display-special-buffer))
+(add-to-list 'special-display-regexps '("[ ]?[*][^*]+[*]" (display-special-buffer)))
 
-;;(add-hook 'window-setup-hook 'w32-maximize-frame t)
-;;(add-hook 'write-file-hooks 'delete-trailing-whitespace)
+(add-hook 'write-file-hooks 'delete-trailing-whitespace)
 
 (put 'upcase-region 'disabled -1)
 

@@ -52,7 +52,7 @@
   (interactive)
   (w32-send-sys-command 61488))
 
-(defun display-special-buffer (buf)
+(defun display-special-buffer (buf alist)
   "put the special buffers in the right spot (bottom rigt)"
     (let ((target-window (window-at (- (frame-width) 4) (- (frame-height) 4)))
           (pop-up-windows t))

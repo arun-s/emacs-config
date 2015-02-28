@@ -27,10 +27,14 @@
              (setq c-basic-offset 2)
 	     (setq tab-width 2)
 	     (setq indent-tabs-mode nil)
-	     (setq tab-stop-list (number-sequence 2 200 2)))
-)
+	     (setq tab-stop-list (number-sequence 2 200 2))))
 
-(add-hook 'c-mode-common-hook 'doxymacs-mode)
+(add-hook 'python-mode-hook
+	  '(lambda ()
+	     (setq py-indent-offset 2)
+	     (setq tab-width 2)
+	     (setq indent-tabs-mode nil)
+	     (setq tab-stop-list (number-sequence 2 200 2))))
 
 (font-lock-add-keywords
  'c-mode
