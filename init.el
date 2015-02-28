@@ -66,6 +66,7 @@
 		      rust-mode
 		      multiple-cursors
 		      powerline
+		      expand-region
 		      )
   "My Default Packages")
 
@@ -93,12 +94,18 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
+;;; multiple cursors
+(require 'multiple-cursors)
+
 ;;; enable elpy
 (elpy-enable)
 
 ;;; powerline
 (require 'powerline)
 (powerline-default-theme)
+
+(require 'expand-region)
+
 
 ;;; enable yaml-mode
 (require 'yaml-mode)
