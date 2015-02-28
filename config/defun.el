@@ -8,6 +8,7 @@
 ;; Email        : aruns@outlook.com
 ;; -------------------------------------------------------------------------
 
+(require 'cl) ;; need this for 'loop' function
 
 ;;untabify file
 (defun untabify-file ()
@@ -63,5 +64,19 @@
   "Move one window counterclockwise - assumes there are 3 windows"
   (interactive)
   (other-window -1))
+
+(defun are-packages-installed (pkg-list)
+  (loop for pkg in pkg-list
+	when (not (package-installed-p pkg)) do (return nil)
+	finally (return t)))
+
+(defun check-and-install-my-packages (pkg-list)
+  (unless (are-packages-installed pkg-list)
+    (message "%s" "Refreshing package database...")
+    (package-refresh-contents)
+    (dolist (pkg my-pkg-list)
+      (when (not (package-installed-p pkg))
+	(package-install pkg)))))
+
 
 (provide 'defun)

@@ -49,11 +49,30 @@
 (setq load-path (cons "~/.emacs.d/config/" load-path))
 (setq load-path (cons "~/.emacs.d/themes/" load-path))
 
+;; ===============================================
+;; Definitions of custom functions
+;; ===============================================
+(require 'defun)
+
 ;; ================
 ;; Package related
 ;; ================
+(defvar my-pkg-list '(auto-complete
+		      elpy
+		      magit
+		      yasnippet
+		      python-mode
+		      yaml-mode
+		      rust-mode
+		      multiple-cursors
+		      powerline
+		      )
+  "My Default Packages")
+
 ;;; start package.el with emacs
 (require 'package)
+
+;;; add external repositories
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
@@ -61,7 +80,8 @@
 ;;; initialize package
 (package-initialize)
 
-;(require 'prelude-packages)
+;;; check for and install packages from my-pkg-list
+(check-and-install-my-packages my-pkg-list)
 
 ;;; start auto-complete with emacs
 (require 'auto-complete)
@@ -75,6 +95,19 @@
 
 ;;; enable elpy
 (elpy-enable)
+
+;;; powerline
+(require 'powerline)
+(powerline-default-theme)
+
+;;; enable yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;;support for rust major mode
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
+
 
 ;; ===============
 ;; Loading modules
@@ -94,16 +127,8 @@
 (add-to-list 'auto-mode-alist '("wscript$" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
-;;support for rust major mode
-(autoload 'rust-mode "rust-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
 
 (setq major-mode (quote text-mode))
-
-;; ===============================================
-;; Definitions of custom functions
-;; ===============================================
-(require 'defun)
 
 ;; ===============================================
 ;; Key bindings
@@ -137,4 +162,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
