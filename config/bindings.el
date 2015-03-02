@@ -35,12 +35,12 @@
 
 
 ;; cscope bindings
-(global-set-key "\C-c s" 'cscope-find-this-symbol)
-(global-set-key "\C-c p" 'cscope-prev-symbol)
-(global-set-key "\C-c n" 'cscope-next-symbol)
-(global-set-key "\C-c u" 'cscope-pop-mark)
-(global-set-key "\C-c O" 'move-2-windows)
-(global-set-key "\C-c g" 'cscope-find-egrep-pattern)
+(global-set-key (kbd "\C-c s") 'cscope-find-this-symbol)
+(global-set-key (kbd "\C-c p") 'cscope-prev-symbol)
+(global-set-key (kbd "\C-c n") 'cscope-next-symbol)
+(global-set-key (kbd "\C-c u") 'cscope-pop-mark)
+(global-set-key (kbd "\C-c O") 'move-2-windows)
+(global-set-key (kbd "\C-c g") 'cscope-find-egrep-pattern)
 
 ;; highlight symbol bindings
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
