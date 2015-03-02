@@ -57,6 +57,7 @@
 (setq pop-up-windows -1)
 
 (add-to-list 'display-buffer-alist '("[ ]?[*][^*]+[*]". ((display-special-buffer))))
+(add-to-list 'display-buffer-alist '("COMMIT_EDITMSG". ((display-special-buffer))))
 
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
 
