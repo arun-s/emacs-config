@@ -51,10 +51,10 @@
 ;; Stop Emacs from splitting "frames", encourage it to pop up new
 ; frames for new content.
 ; see: http://www.gnu.org/software/emacs/elisp/html_node/Choosing-Window.html
-(setq pop-up-frames -1)
-(setq special-display-popup-frame -1)
-(setq split-window-preferred-function -1) ;discourage horizontal splits
-(setq pop-up-windows -1)
+(setq pop-up-frames nil)
+(setq special-display-popup-frame nil)
+(setq split-window-preferred-function nil) ;discourage horizontal splits
+(setq pop-up-windows nil)
 
 (add-to-list 'display-buffer-alist '("[ ]?[*][^*]+[*]". ((display-special-buffer))))
 (add-to-list 'display-buffer-alist '("COMMIT_EDITMSG". ((display-special-buffer))))
