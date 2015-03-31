@@ -119,6 +119,12 @@
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
 
+(eval-after-load "org"
+  '(require 'ox-md nil t))
+;(eval-after-load "org"
+;  '(require 'ox-confluence nil t))
+
+
 
 ;; ===============
 ;; Loading modules
@@ -167,7 +173,7 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#282a2e" "#cc6666" "#b5bd68" "#f0c674" "#81a2be" "#b294bb" "#81a2be" "#e0e0e0"])
  '(ansi-term-color-vector [unspecified "#282a2e" "#cc6666" "#b5bd68" "#f0c674" "#81a2be" "#b294bb" "#81a2be" "#e0e0e0"])
- '(custom-safe-themes (quote ("ece86e57bca6b57273797ddc3cfc70faab6934758c447ca4c4c7fd51619f89e7" "e53cc4144192bb4e4ed10a3fa3e7442cae4c3d231df8822f6c02f1220a0d259a" "c5adfd01eedad9a060bdbfadfbe90f97e7559946bcbc097d51560d653b973572" "00a19ebc359b6419e1e4ab05406d29b265dedd99bcbbf8f870da91098f546e99" "fa94f0c2ddd30df2bca56ddee6854c5926a8a67125d0c28326fd504e377563a9" "f41fd682a3cd1e16796068a2ca96e82cfd274e58b978156da0acce4d56f2b0d5" default)))
+ '(custom-safe-themes (quote ("7cfccceb3ef93d03c84f4c8e5b647eb6c8d25a78c41d69a02fbaf68453b4346d" "ece86e57bca6b57273797ddc3cfc70faab6934758c447ca4c4c7fd51619f89e7" "e53cc4144192bb4e4ed10a3fa3e7442cae4c3d231df8822f6c02f1220a0d259a" "c5adfd01eedad9a060bdbfadfbe90f97e7559946bcbc097d51560d653b973572" "00a19ebc359b6419e1e4ab05406d29b265dedd99bcbbf8f870da91098f546e99" "fa94f0c2ddd30df2bca56ddee6854c5926a8a67125d0c28326fd504e377563a9" "f41fd682a3cd1e16796068a2ca96e82cfd274e58b978156da0acce4d56f2b0d5" default)))
  '(inhibit-startup-screen t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
