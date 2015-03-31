@@ -29,7 +29,7 @@
 
 ;;; Code:
 
-(deftheme org-beatify "Sub-theme to beautify org mode")
+(deftheme org-beautify "Sub-theme to beautify org mode")
 
 (let* ((sans-font (cond ((x-list-fonts "Lucida Grande") '(:font "Lucida Grande"))
                         ((x-list-fonts "Verdana") '(:font "Verdana"))
@@ -42,7 +42,7 @@
        (secondary-color (face-background 'secondary-selection nil 'region))
        (padding `(:line-width 5 :color ,background-color))
        (org-highlights `(:foreground ,base-font-color :background ,secondary-color)))
-  (custom-theme-set-faces 'org-beatify
+  (custom-theme-set-faces 'org-beautify
                           `(org-agenda-structure ((t (:inherit default ,@sans-font :height 2.0 :underline nil))))
                           `(org-level-8 ((t ,headline)))
                           `(org-level-7 ((t ,headline)))
@@ -63,6 +63,6 @@
                           `(org-headline-done ((t (:strike-through t))))
                           `(org-done ((t (:strike-through t))))))
 
-(provide-theme 'org-beatify)
+(provide-theme 'org-beautify)
 
-;;; org-beatify.el ends here
+;;; org-beautify.el ends here

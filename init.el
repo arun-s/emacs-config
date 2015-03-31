@@ -57,6 +57,7 @@
 ;; Package related
 ;; ================
 (defvar my-pkg-list '(auto-complete
+		      company
 		      elpy
 		      magit
 		      yasnippet
@@ -69,6 +70,7 @@
 		      org-agenda-property
 		      org-autolist
 		      dired+
+		      matlab-mode
 		      )
   "My Default Packages")
 
