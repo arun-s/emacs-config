@@ -26,10 +26,25 @@
 (setq search-highlight t)
 (setq transient-mark-mode t)
 
-;; Minimalistic appearance, turn off menu, tool and scroll bars
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;; Turn off mouse interface early in startup
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;; No splash screen
+(setq inhibit-splash-screen t)
+
+;; Write backup files to own directory
+(setq backup-directory-alist `((".".,(expand-file-name
+				      (concat user-emacs-directory "backups")))))
+
+;; Make backups of files, even when they're in version control
+(setq vc-make-backup-files t)
+
+;; Save point poisition between sessions
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file (expand-file-name ".places" user-emacs-directory))
 
 
 ;; Use "y or n" answers instead of full words "yes or no"

@@ -48,6 +48,14 @@
 	     (go-oracle-mode)
 	     ))
 
+(add-hook 'magit-mode-hook
+	   '(lambda ()
+	      ;; magit - toggle whitespace for diff
+	      (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
+	      ))
+
+
+
 (font-lock-add-keywords
  'c-mode
  '(("\\<\\(\\sw+\\) ?(" 1 'font-lock-constant-face)))
