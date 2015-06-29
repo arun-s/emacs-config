@@ -36,6 +36,18 @@
 	     (setq indent-tabs-mode nil)
 	     (setq tab-stop-list (number-sequence 2 200 2))))
 
+(add-hook 'go-mode-hook
+	  '(lambda ()
+	     (setq tab-width 2)
+	     (setq indent-tabs-mode nil)
+	     (setq tab-stop-list (number-sequence 2 200 2))
+	     (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
+	     (local-set-key (kbd "C-c C-g") 'go-goto-imports)
+	     (add-hook 'before-save-hook 'gofmt-before-save)
+	     (local-set-key (kbd "C-c C-k") 'godoc)
+	     (go-oracle-mode)
+	     ))
+
 (font-lock-add-keywords
  'c-mode
  '(("\\<\\(\\sw+\\) ?(" 1 'font-lock-constant-face)))

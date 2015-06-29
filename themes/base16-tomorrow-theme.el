@@ -21,7 +21,7 @@
       (blue "#81a2be")
       (purple "#b294bb"))
 
-  (custom-theme-set-faces 
+  (custom-theme-set-faces
    'base16-tomorrow
 
    ;; Built-in stuff (Emacs 23)
@@ -29,7 +29,7 @@
    `(fringe ((t (:background ,current-line))))
    `(minibuffer-prompt ((t (:foreground ,blue))))
    `(mode-line ((t (:background ,current-line :foreground ,foreground))))
-   `(region ((t (:background ,selection))))
+   `(region ((t (:background ,selection :foreground, red))))
 
    ;; Font-lock stuff
    `(font-lock-comment-face ((t (:foreground ,comment))))

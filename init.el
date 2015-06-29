@@ -72,6 +72,8 @@
 		      dired+
 		      matlab-mode
 		      go-mode
+		      go-direx
+		      cl-format
 		      )
   "My Default Packages")
 
@@ -122,6 +124,8 @@
 
 ;; support for go major mode
 (autoload 'go-mode "go-mode" nil t)
+(load "oracle.el")
+(require 'go-oracle)
 (add-to-list 'auto-mode-alist '("\\.go$" . go-mode))
 
 ;; org-mode
