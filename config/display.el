@@ -38,8 +38,7 @@
 ;(require 'sublime-text-2)
 ;(sublime-text-2)
 (add-to-list 'custom-theme-load-path (format "%s/%s" custom-theme-directory "themes"))
-(load-theme 'base16-tomorrow t)
-
+(load-theme 'monokai t)
 ;(require 'windows)
 ;(win:startup-with-window)
 ;(define-key ctl-x-map "C" 'see-you-again)
