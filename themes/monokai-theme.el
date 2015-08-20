@@ -5334,7 +5334,7 @@ Also affects 'linum-mode' background."
    `(magit-diff-use-overlays nil)
 
    ;; highlight-changes
-   `(highlight-changes-colors (,magenta ,violet))
+   `(highlight-changes-colors '(,magenta ,violet))
 
    ;; highlight-tail
    `(highlight-tail-colors
