@@ -88,4 +88,38 @@
 (add-to-list 'auto-mode-alist '("\\.mak\\'" . makefile-mode))
 (add-to-list 'auto-mode-alist '("\\.mk\\'" . makefile-mode))
 
+;; org mode settings
+(setq org-directory "~/personal")
+(setq org-default-notes-file "~/personal/organizer.org")
+
+;; org-refile settings
+(setq org-reverse-note-order t)
+(setq org-refile-use-outline-path nil)
+(setq org-refile-allow-creating-parent-nodes 'confirm)
+(setq org-refile-use-cache nil)
+(setq org-refile-targets '((org-agenda-files . (:maxlevel . 6))))
+(setq org-blank-before-new-entry nil)
+
+(setq org-capture-templates
+      `(("t" "Tasks" entry
+         (file+headline "~/personal/organizer.org" "Tasks")
+         ,my/org-basic-task-template)
+
+	("T" "Quick task" entry
+         (file+headline "~/personal/organizer.org" "Tasks")
+         "* TODO %^{Task}"
+         :immediate-finish t)
+
+	("J" "Journal entry with date" plain
+         (file+datetree+prompt "~/personal/journal.org")
+         "%K - %a\n%i\n%?\n"
+         :unnarrowed t)
+
+	("q" "Quick note" item
+         (file+headline "~/personal/organizer.org" "Quick notes"))))
+
+
+
+
+
 (provide 'settings)

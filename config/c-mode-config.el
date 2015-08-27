@@ -1,4 +1,4 @@
-;; -------------------------------------------------------------------------
+; -------------------------------------------------------------------------
 ;; c-mode-config.el -- all C mode customizations
 ;;           see http://github.com/arun-s/emacs-config
 ;;
@@ -53,6 +53,13 @@
 	      ;; magit - toggle whitespace for diff
 	      (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
 	      ))
+
+
+(add-hook 'org-mode-hook
+	  '(lambda ()
+	     (setq tab-width 2)
+	     (setq indent-tabs-mode nil)
+	     ))
 
 
 

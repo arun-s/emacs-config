@@ -94,6 +94,13 @@
   (setq magit-diff-options (remove "-w" magit-diff-options))
   (magit-refresh))
 
-
+(defvar my/org-basic-task-template "* TODO %^{Task}
+SCHEDULED: %^t
+%<%Y-%m-%d %H:%M>
+:PROPERTIES:
+:Effort: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+:END:
+%?
+" "Basic task data")
 
 (provide 'defun)

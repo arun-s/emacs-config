@@ -19,7 +19,6 @@
 (global-set-key [f2]          'other-window)
 (global-set-key [f1]          'move-prev-window)
 (global-set-key [f4]          'speedbar)
-(global-set-key [f9]          '(win:set-wc 1))
 
 (global-set-key "\C-xg" 'goto-line)
 
@@ -66,6 +65,19 @@
 ;; expand-region key bindings
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C--") 'er/contract-region)
+
+;; org-mode bindings
+(global-set-key (kbd "C-c r") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c L") 'org-insert-link-global)
+(global-set-key (kbd "C-c O") 'org-open-at-point-global)
+(global-set-key (kbd "<f9> <f9>") 'org-agenda-list)
+(global-set-key (kbd "<f9> <f8>") (lambda () (interactive) (org-capture nil "r")))
+;; (global-set-key (kbd "C-TAB") 'org-cycle org-mode-map)
+;; (global-set-key (kbd "C-c v") 'org-show-todo-tree); org-mode-map)
+;; (global-set-key (kbd "C-c C-r") 'org-refile org-mode-map)
+;; (global-set-key (kbd "C-c R") 'org-reveal org-mode-map)
 
 
 (provide 'bindings)
