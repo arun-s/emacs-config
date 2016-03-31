@@ -36,6 +36,13 @@
 	     (setq indent-tabs-mode nil)
 	     (setq tab-stop-list (number-sequence 2 200 2))))
 
+(add-hook 'js-mode-common-hook
+	  '(lambda ()
+	     (setq js-indent-offset 2)
+	     (setq tab-width 2)
+	     (setq indent-tabs-mode nil)
+	     (setq tab-stop-list (number-sequence 2 200 2))))
+
 (add-hook 'go-mode-hook
 	  '(lambda ()
 	     (setq tab-width 2)
