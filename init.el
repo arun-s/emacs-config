@@ -131,6 +131,9 @@
 ;; org-mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
+;; org-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js-mode))
+
 (eval-after-load "org"
   '(require 'ox-md nil t))
 ;(eval-after-load "org"
