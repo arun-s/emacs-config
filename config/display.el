@@ -12,14 +12,14 @@
 ;; Font Setting
 ;; ============
 
-(cond
- ((string-equal system-name "falcon")
+(if (string-equal system-name "falcon")
+    (progn
+      (set-default-font "-ADBO-Source Code Pro-normal-normal-normal-*-25-*-*-*-m-0-iso10646-1")
+      )
   (progn
-    (set-default-font "-adobe-Source Code Pro-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
-  (progn
-    (set-default-font "-adobe-Source Code Pro-normal-normal-normal-*-25-*-*-*-m-0-iso10646-1"))
-  )
- )
+    (set-default-font "-ADBO-Source Code Pro-normal-normal-normal-*-25-*-*-*-m-0-iso10646-1")
+    )
+)
 
 ;(set-face-font 'default "-apple-Inconsolata-light-r-normal-*-18-*-*-*-m-*-iso10646-1")
 ;(set-default-font "-adobe-Source Code Pro-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")

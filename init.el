@@ -44,7 +44,7 @@
 ;; ================
 ;; Load Paths
 ;; ================
-(setq load-path (cons "~/.emacs.d/"          load-path))
+;(setq load-path (cons "~/.emacs.d/"          load-path))
 (setq load-path (cons "~/.emacs.d/site-lisp/" load-path))
 (setq load-path (cons "~/.emacs.d/config/" load-path))
 
