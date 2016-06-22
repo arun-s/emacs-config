@@ -74,6 +74,7 @@
 		      go-mode
 		      go-direx
 		      cl-format
+		      ace-jump-mode
 		      )
   "My Default Packages")
 
@@ -112,6 +113,9 @@
 (powerline-default-theme)
 
 (require 'expand-region)
+
+(require 'ace-jump-mode)
+(require 'neotree)
 
 
 ;;; enable yaml-mode

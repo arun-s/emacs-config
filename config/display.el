@@ -12,8 +12,17 @@
 ;; Font Setting
 ;; ============
 
+(cond
+ ((string-equal system-name "falcon")
+  (progn
+    (set-default-font "-adobe-Source Code Pro-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
+  (progn
+    (set-default-font "-adobe-Source Code Pro-normal-normal-normal-*-25-*-*-*-m-0-iso10646-1"))
+  )
+ )
+
 ;(set-face-font 'default "-apple-Inconsolata-light-r-normal-*-18-*-*-*-m-*-iso10646-1")
-(set-default-font "-adobe-Source Code Pro-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+;(set-default-font "-adobe-Source Code Pro-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
 ;(set-face-font 'default "-outline-Inconsolata-normal-r-normal-normal-15-97-96-96-c-*-iso8859-1")
 ;;(set-default-font "-*-'Trebuchet MS'-normal-r-*-*-12-*-*-*-c-*-*-ansi-")
 ;;(set-default-font "-*-arial-normal-r-*-*-11-*-*-*-c-*-*-ansi-")
